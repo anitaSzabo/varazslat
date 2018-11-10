@@ -29,8 +29,11 @@ public class Game {
             changeRoles();
         }
         Player winner = Evaluator.calculateWinner(player1, player2);
-        System.out.println("The winner is: " + winner.getName());
-
+        if(winner == null) {
+            System.out.println("It's a tie");
+        } else {
+            System.out.println("The winner is: " + winner.getName());
+        }
     }
 
     private void changeRoles() {
